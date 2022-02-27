@@ -8,7 +8,6 @@ function App() {
   const handleIncreasedSteps = () => {
     const newStepsCount = steps + 1;
     setSteps(newStepsCount);
-    console.log(steps);
   }
   useEffect(() => {
     console.log(steps);
@@ -17,7 +16,7 @@ function App() {
     <div className="App">
       <h3>My Steps: {steps}</h3>
       <button onClick={handleIncreasedSteps}>Walk</button>
-      <Device name="phone" price="12000" />
+      <Device name="phone" steps={steps} price="12000" />
     </div>
   );
 }
